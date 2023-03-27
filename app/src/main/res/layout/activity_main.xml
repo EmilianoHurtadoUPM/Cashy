@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_background"
+    tools:context=".MainActivity">
+
+   <EditText
+       android:id="@+id/password"
+       android:layout_width="328dp"
+       android:layout_height="48dp"
+       android:layout_marginEnd="56dp"
+       android:background="@drawable/edittext"
+       android:hint="ESCRIBE LA CONTRASEÑA"
+       android:textAlignment="center"
+       android:textColor="@android:color/background_dark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/txt6" />
+
+   <TextView
+       android:id="@+id/txt6"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:layout_marginEnd="164dp"
+       android:text="INGRESE LA CONTRASEÑA"
+       android:textAlignment="center"
+       android:textColor="@android:color/widget_edittext_dark"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/guideline16" />
+
+   <EditText
+       android:id="@+id/usuario"
+       android:layout_width="328dp"
+       android:layout_height="48dp"
+       android:layout_marginEnd="56dp"
+       android:background="@drawable/edittext"
+       android:hint="ESCRIBE EL USUARIO"
+       android:textAlignment="center"
+       android:textColor="@android:color/background_dark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/txt2"
+       tools:ignore="MissingConstraints" />
+
+   <TextView
+       android:id="@+id/txt2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="INGRESE EL USUARIO"
+       android:textAlignment="center"
+       android:textColor="@android:color/widget_edittext_dark"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.117"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/nombre"
+       tools:ignore="MissingConstraints" />
+
+   <EditText
+       android:id="@+id/nombre"
+       android:layout_width="328dp"
+       android:layout_height="48dp"
+       android:layout_marginEnd="56dp"
+       android:background="@drawable/edittext"
+       android:hint="ESCRIBE EL NOMBRE|"
+       android:textAlignment="center"
+       android:textColor="@android:color/background_dark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/txt1"
+       tools:ignore="MissingConstraints" />
+
+   <TextView
+       android:id="@+id/txt1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginEnd="208dp"
+       android:text="INGRESE EL NOMBRE"
+       android:textAlignment="center"
+       android:textColor="?android:attr/colorForeground"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/password"
+       tools:ignore="MissingConstraints" />
+
+   <Button
+       android:id="@+id/btnBuscar"
+       android:layout_width="143dp"
+       android:layout_height="51dp"
+       android:layout_marginTop="16dp"
+       android:layout_marginEnd="24dp"
+       android:background="@drawable/fondo_btn"
+       android:text="BUSCAR"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       tools:ignore="MissingConstraints" />
+
+   <EditText
+       android:id="@+id/id"
+       android:layout_width="203dp"
+       android:layout_height="50dp"
+       android:layout_marginTop="16dp"
+       android:layout_marginEnd="24dp"
+       android:background="@drawable/edittext"
+       android:hint="BUSCAR REGISTRO POR ID"
+       android:textAlignment="center"
+       android:textColor="@android:color/background_dark"
+       app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/txt5"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginEnd="212dp"
+       android:text="INGRESE EL CORREO"
+       android:textAlignment="center"
+       android:textColor="@android:color/widget_edittext_dark"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/telefono"
+       tools:ignore="MissingConstraints" />
+
+   <EditText
+       android:id="@+id/correo"
+       android:layout_width="328dp"
+       android:layout_height="48dp"
+       android:layout_marginEnd="56dp"
+       android:background="@drawable/edittext"
+       android:hint="ESCRIBE EL CORREO"
+       android:textAlignment="center"
+       android:textColor="@android:color/background_dark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/txt5"
+       tools:ignore="MissingConstraints" />
+
+   <EditText
+       android:id="@+id/telefono"
+       android:layout_width="328dp"
+       android:layout_height="48dp"
+       android:layout_marginEnd="56dp"
+       android:background="@drawable/edittext"
+       android:hint="ESCRIBE AQUÍ EL TELEFONO"
+       android:textAlignment="center"
+       android:textColor="@android:color/background_dark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/txt4"
+       tools:ignore="MissingConstraints" />
+
+   <TextView
+       android:id="@+id/txt4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginEnd="196dp"
+       android:text="INGRESE EL TELÉFONO"
+       android:textAlignment="center"
+       android:textColor="@android:color/widget_edittext_dark"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/direccion"
+       tools:ignore="MissingConstraints" />
+
+   <EditText
+       android:id="@+id/direccion"
+       android:layout_width="328dp"
+       android:layout_height="48dp"
+       android:layout_marginEnd="56dp"
+       android:background="@drawable/edittext"
+       android:hint="ESCRIBE LA DIRECCION"
+       android:textAlignment="center"
+       android:textColor="@android:color/background_dark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/txt3"
+       tools:ignore="MissingConstraints" />
+
+   <TextView
+       android:id="@+id/txt3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="ESCRIBE AQUI LA DIRECCIÓN"
+       android:textAlignment="center"
+       android:textColor="@android:color/widget_edittext_dark"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.167"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/usuario"
+       tools:ignore="MissingConstraints" />
+
+   <Button
+       android:id="@+id/acceso"
+       android:layout_width="323dp"
+       android:layout_height="48dp"
+       android:layout_marginTop="16dp"
+       android:background="@drawable/fondo_btn"
+       android:onClick="validar"
+       android:text="ACCESAR"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.505"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/correo"
+       tools:ignore="MissingConstraints" />
+
+   <Button
+       android:id="@+id/mostrar"
+       android:layout_width="323dp"
+       android:layout_height="48dp"
+       android:layout_marginTop="12dp"
+       android:background="@drawable/fondo_btn"
+       android:text="LIMPIAR"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.505"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/acceso" />
+
+   <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/guideline9"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       app:layout_constraintGuide_begin="219dp" />
+
+   <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/guideline16"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       app:layout_constraintGuide_begin="79dp" />
+
+   <Button
+       android:id="@+id/button8"
+       android:layout_width="323dp"
+       android:layout_height="48dp"
+       android:layout_marginTop="12dp"
+       android:layout_marginEnd="44dp"
+       android:background="@drawable/fondo_btn"
+       android:onClick="regresar"
+       android:text="Regresar"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/mostrar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
