@@ -13,6 +13,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CajaAhorro"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Login2"
             android:exported="false">
             <meta-data
@@ -22,6 +29,13 @@
         <activity
             android:name=".Login11"
             android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

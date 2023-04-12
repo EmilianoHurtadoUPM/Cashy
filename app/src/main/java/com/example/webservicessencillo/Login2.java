@@ -40,7 +40,9 @@ public class Login2 extends AppCompatActivity {
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validarUsuario("http://192.168.1.84/php2/validar_usuario_real.php");
+                //validarUsuario("http://192.168.1.84/php2/validar_usuario_real.php");
+                Intent intent = new Intent(getApplicationContext(), Menu.class);
+                startActivity(intent);
             }
         });
 
@@ -51,6 +53,8 @@ public class Login2 extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if (!response.isEmpty()) {
+                    Intent intent = new Intent(getApplicationContext(), Menu.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(Login2.this, "Usuario incorrecto", Toast.LENGTH_LONG).show();
                 }
