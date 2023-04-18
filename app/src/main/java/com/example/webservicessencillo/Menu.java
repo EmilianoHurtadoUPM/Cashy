@@ -15,7 +15,8 @@ public class Menu extends AppCompatActivity {
     }
 
     public void Canastacos(View view) {
-
+        Intent canastacos = new Intent(this, Canastacos.class);
+        startActivity(canastacos);
     }
 
     public void Adivina(View view) {

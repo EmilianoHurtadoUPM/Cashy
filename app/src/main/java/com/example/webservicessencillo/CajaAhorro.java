@@ -37,6 +37,12 @@ public class CajaAhorro extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_caja_ahorro);
+
+        txtDA=findViewById(R.id.txtDA);
+        txteAhorros=findViewById(R.id.txteAhorros);
+        txtePasswordd=findViewById(R.id.txtePasswordd);
+        txteUsuarioo=findViewById(R.id.txteUsuarioo);
 
 
        /* btnActualizar.setOnClickListener(new View.OnClickListener() {

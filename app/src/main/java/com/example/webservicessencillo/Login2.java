@@ -40,9 +40,9 @@ public class Login2 extends AppCompatActivity {
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //validarUsuario("http://192.168.1.84/php2/validar_usuario_real.php");
                 Intent intent = new Intent(getApplicationContext(), Menu.class);
                 startActivity(intent);
+                //validarUsuario("http://192.168.1.84/php2/validar_usuario_real.php");
             }
         });
 
@@ -52,12 +52,12 @@ public class Login2 extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if (!response.isEmpty()) {
+                /*if (!response.isEmpty()) {
                     Intent intent = new Intent(getApplicationContext(), Menu.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(Login2.this, "Usuario incorrecto", Toast.LENGTH_LONG).show();
-                }
+                }*/
 
             }
         }, new Response.ErrorListener() {
