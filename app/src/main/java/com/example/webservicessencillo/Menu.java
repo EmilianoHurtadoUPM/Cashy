@@ -20,11 +20,13 @@ public class Menu extends AppCompatActivity {
     }
 
     public void Adivina(View view) {
-
+        Intent adivina = new Intent(this, Adivina.class);
+        startActivity(adivina);
     }
 
     public void Continentes(View view) {
-
+        Intent continentes = new Intent(this, Continentes.class);
+        startActivity(continentes);
     }
 
     public void Caja(View view) {

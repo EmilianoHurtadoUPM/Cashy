@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/oceaniaf"
+    tools:context=".Oceania">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:gravity="center"
+        android:text="OCEANIA"
+        android:textColor="#3F51B5"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="267dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="120dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8">
+
+        <CheckBox
+            android:id="@+id/chkCapOc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Capital" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <CheckBox
+            android:id="@+id/chkMonOc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Moneda" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <CheckBox
+            android:id="@+id/chkIdiOc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Idioma" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="128dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/imgbLimpiar"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+        app:layout_constraintTop_toTopOf="@+id/guideline8">
+
+        <RadioGroup
+            android:id="@+id/rdbgOc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rdbFiji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fiji" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <RadioButton
+                android:id="@+id/rdbTuvalu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tuvalu" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <RadioButton
+                android:id="@+id/rdbAus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Australia" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imgbLimpiar"
+        android:layout_width="74dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="Limpiar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintVertical_bias="0.495"
+        app:srcCompat="@drawable/limpiar" />
+
+    <ImageView
+        android:id="@+id/imgvOc"
+        android:layout_width="165dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        app:srcCompat="@drawable/oceaniam" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="695dp" />
+
+    <ImageButton
+        android:id="@+id/imgbRegresar"
+        android:layout_width="80dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="72dp"
+        android:onClick="Inicio"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/inicio" />
+
+    <TableLayout
+        android:layout_width="255dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:text="Capital:"
+                android:textColor="#3F51B5" />
+
+            <Space
+                android:layout_width="34dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/txtCapOc"
+                android:layout_width="90dp"
+                android:layout_height="25dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:text="Moneda:"
+                android:textColor="#3F51B5" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/txtMonOc"
+                android:layout_width="90dp"
+                android:layout_height="25dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="15dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:text="Idioma:"
+                android:textColor="#3F51B5" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/txtIdiOc"
+                android:layout_width="90dp"
+                android:layout_height="25dp" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
