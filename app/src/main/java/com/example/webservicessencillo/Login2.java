@@ -40,7 +40,6 @@ public class Login2 extends AppCompatActivity {
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //validarUsuario("http://192.168.1.84/php2/validar_usuario_real.php");
                 Intent intent = new Intent(getApplicationContext(), Menu.class);
                 startActivity(intent);
             }

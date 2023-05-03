@@ -26,27 +26,32 @@ public class Continentes extends AppCompatActivity {
 
     public void America(View view)
     {
-
+        Intent america = new Intent(this,America.class);
+        startActivity(america);
     }
 
     public void Europa(View view)
     {
-
+        Intent eur = new Intent(this,Europa.class);
+        startActivity(eur);
     }
 
     public void Asia(View view)
     {
-
+        Intent asi = new Intent(this,Asia.class);
+        startActivity(asi);
     }
 
     public void Africa(View view)
     {
-
+        Intent afr = new Intent(this,Africa.class);
+        startActivity(afr);
     }
 
     public void Oceania(View view)
     {
-
+        Intent oce = new Intent(this,Oceania.class);
+        startActivity(oce);
     }
 
     public void Salir(View view)
