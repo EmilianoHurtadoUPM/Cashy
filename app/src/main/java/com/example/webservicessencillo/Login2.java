@@ -1,6 +1,5 @@
 package com.example.webservicessencillo;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,75 +9,71 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+import androidx.annotation.NonNull;
+import android.text.TextUtils;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Login2 extends AppCompatActivity {
 
-    EditText txteUsuario, txtepPassword;
-    Button btnA;
+    private FirebaseAuth mAuth;
+
+    private Button botonLogin, botonRegister;
+    private EditText etEmail, etPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
-        txteUsuario = findViewById(R.id.txteUsuario);
-        txtepPassword = findViewById(R.id.txtepPassword);
-        btnA = findViewById(R.id.btnA);
+        // ...
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
+        botonLogin = findViewById(R.id.btnA);
+        etEmail = findViewById(R.id.txteUsuario);
+        etPassword = findViewById(R.id.txtepPassword);
 
-
-        btnA.setOnClickListener(new View.OnClickListener() {
+        botonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Menu.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                logUser();
             }
         });
-
     }
 
-    private void validarUsuario(String URL) {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                if (!response.isEmpty()) {
-                    Intent intent = new Intent(getApplicationContext(), Menu.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(Login2.this, "Usuario incorrecto", Toast.LENGTH_LONG).show();
-                }
+    private void logUser() {
+        String email, password;
+        email = etEmail.getText().toString();
+        password = etPassword.getText().toString();
 
-            }
-        }, new Response.ErrorListener() {
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(), "Por favor introduzca email", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(getApplicationContext(), "Por favor introduzca contraseña", Toast.LENGTH_LONG).show();
+            return;
+        }
 
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(Login2.this, error.toString(), Toast.LENGTH_LONG).show();
-            }
-        }) {
-            @Nullable
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> parametros = new HashMap<String, String>();
-                parametros.put("usuario", txteUsuario.getText().toString());
-                parametros.put("password", txtepPassword.getText().toString());
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Login correcto!", Toast.LENGTH_LONG).show();
 
-                return parametros;
-            }
-        };
-        RequestQueue requestQueue= Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-
+                            Intent intent = new Intent(Login2.this, Menu.class);
+                            startActivity(intent);
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "Login incorrecto, vuelva a intentarlo", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
     }
 
     public void regresar(View view) {
