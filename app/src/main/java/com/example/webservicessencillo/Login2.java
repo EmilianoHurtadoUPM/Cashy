@@ -21,7 +21,7 @@ public class Login2 extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-    private Button botonLogin, botonRegister;
+    private Button botonLogin;
     private EditText etEmail, etPassword;
 
     @Override
@@ -29,8 +29,6 @@ public class Login2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
-        // ...
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         botonLogin = findViewById(R.id.btnA);

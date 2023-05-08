@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ...
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         botonLogin = findViewById(R.id.acceso);
@@ -84,10 +82,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            //reload();
         }
     }
     public void regresar(View view) {
